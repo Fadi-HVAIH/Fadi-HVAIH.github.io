@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Fadi Opgenorth</title>
+  <meta name="description" content="Get in touch about AI automation services, hiring, or partnerships. Book a free discovery call.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">Fadi Opgenorth</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="hire-me.html">Hire Me</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="hire-me.html">Hire Me</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Let's Talk</h1>
+      <p>Whether you're a nonprofit looking to automate operations, or an organization looking for AI + finance expertise — I'd like to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section>
+    <div class="container">
+      <!--
+        TODO: Connect to a real form backend.
+        Option 1: Formspree — change the form action to https://formspree.io/f/YOUR_FORM_ID
+                   and remove the id="contact-form" JS handler.
+        Option 2: Netlify Forms — add netlify attribute to the form tag.
+        Option 3: mailto fallback — change action to mailto:fadi@fadiopgenorth.com
+      -->
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in...</label>
+          <select id="interest" name="interest" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="AI Automation Services">AI Automation Services</option>
+            <option value="Hiring Fadi">Hiring Fadi</option>
+            <option value="Partnership">Partnership</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your situation..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Book a Call -->
+  <section>
+    <div class="container">
+      <div class="book-call">
+        <h3>Prefer to talk live?</h3>
+        <p>30-minute discovery call. No pitch, just a conversation about your challenges.</p>
+        <a href="https://cal.com/fadiopgenorth/discovery" class="btn btn-primary" target="_blank" rel="noopener">Book a Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h3>Get occasional insights on AI + finance</h3>
+        <form class="form-inline" action="https://buttondown.com/api/emails/embed-subscribe/fadiopgenorth" method="post" target="popupwindow">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Contact -->
+  <section>
+    <div class="container">
+      <div class="direct-contact">
+        <p><strong>Email:</strong> <a href="mailto:fadi@fadiopgenorth.com">fadi@fadiopgenorth.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/fadiopgenorth" target="_blank" rel="noopener">linkedin.com/in/fadiopgenorth</a></p>
+        <p><strong>Location:</strong> Portland, Oregon metro</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://linkedin.com/in/fadiopgenorth" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/fadiopgenorth" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:fadi@fadiopgenorth.com">fadi@fadiopgenorth.com</a>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="hire-me.html">Hire Me</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <form class="form-inline" action="https://buttondown.com/api/emails/embed-subscribe/fadiopgenorth" method="post" target="popupwindow">
+            <input type="email" name="email" placeholder="AI + finance insights" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Fadi Opgenorth, CPA/MBA
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
