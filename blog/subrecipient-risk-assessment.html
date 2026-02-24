@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Automation Vendor Doesn't Know What a Subrecipient Risk Assessment Actually Requires — Fadi Opgenorth</title>
+  <meta name="description" content="Most automation vendors have never performed a subrecipient risk assessment. Use this 11-point checklist to evaluate whether your vendor covers 2 CFR 200.332 requirements.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
+
+    .blog-post-page .article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .blog-post-page .article-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .article h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 2.5rem;
+    }
+
+    .blog-post-page .article p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-post-page .article strong {
+      color: var(--text-primary);
+    }
+
+    .blog-post-page .article h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .article a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .blog-post-page .callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .blog-post-page .callout p { margin-bottom: 0.75rem; }
+    .blog-post-page .callout p:last-child { margin-bottom: 0; }
+
+    /* ── LEAD MAGNET ── */
+    .blog-post-page .lead-magnet {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2.25rem 2.25rem;
+      text-align: center;
+      margin: 2rem 0 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-post-page .lead-magnet::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .blog-post-page .lead-magnet-icon {
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .lead-magnet h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .blog-post-page .lead-magnet > p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-post-page .lead-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-post-page .lead-form input[type="email"] {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 0.7rem 1rem;
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      width: 280px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .blog-post-page .lead-form input::placeholder { color: #555d73; }
+    .blog-post-page .lead-form input:focus { border-color: var(--accent); }
+
+    .blog-post-page .lead-form button {
+      background: var(--accent);
+      color: #0a0e19;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .blog-post-page .lead-form button:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .blog-post-page .lead-note {
+      font-size: 0.75rem !important;
+      color: var(--text-muted) !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── CHECKLIST ── */
+    .blog-post-page .checklist-section {
+      margin: 3rem 0;
+    }
+
+    .blog-post-page .checklist-section h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post-page .checklist-intro {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-post-page .checklist {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+    }
+
+    .blog-post-page .checklist-group {
+      margin-bottom: 1.75rem;
+    }
+
+    .blog-post-page .checklist-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .blog-post-page .checklist-group-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-post-page .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .blog-post-page .check-item:last-child { margin-bottom: 0; }
+
+    .blog-post-page .check-box {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      margin-top: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .blog-post-page .check-box.checked {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    .blog-post-page .check-box svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--accent);
+      stroke-width: 3;
+      fill: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .blog-post-page .check-box.checked svg { opacity: 1; }
+
+    .blog-post-page .check-item span.checked-text {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    /* ── SCORE PANEL ── */
+    .blog-post-page .score-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin-top: 1.5rem;
+      transition: border-color 0.3s;
+    }
+
+    .blog-post-page .score-panel.score-good { border-color: #2a9d8f; }
+    .blog-post-page .score-panel.score-warn { border-color: #e9c46a; }
+    .blog-post-page .score-panel.score-bad { border-color: #e76f51; }
+
+    .blog-post-page .score-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .score-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .blog-post-page .score-count {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .blog-post-page .score-count.good { color: #2a9d8f; }
+    .blog-post-page .score-count.warn { color: #e9c46a; }
+    .blog-post-page .score-count.bad { color: #e76f51; }
+
+    .blog-post-page .score-bar-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-post-page .score-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.4s ease, background 0.3s;
+      width: 0%;
+    }
+
+    .blog-post-page .score-bar-fill.good { background: #2a9d8f; }
+    .blog-post-page .score-bar-fill.warn { background: #e9c46a; }
+    .blog-post-page .score-bar-fill.bad { background: #e76f51; }
+
+    .blog-post-page .score-breakdown {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .score-group {
+      flex: 1;
+    }
+
+    .blog-post-page .score-group-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .blog-post-page .score-group-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .blog-post-page .score-verdict {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .blog-post-page .verdict-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .blog-post-page .verdict-text strong {
+      color: var(--text-primary);
+    }
+
+    /* Flags on unchecked items */
+    .blog-post-page .check-item.flagged span {
+      color: #e76f51;
+    }
+
+    .blog-post-page .flag-icon {
+      display: none;
+      flex-shrink: 0;
+      margin-left: auto;
+      padding-left: 0.5rem;
+    }
+
+    .blog-post-page .check-item.flagged .flag-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    .blog-post-page .flag-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #e76f51;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .blog-post-page .score-panel .reset-btn {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 0.35rem 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .blog-post-page .score-panel .reset-btn:hover {
+      border-color: var(--text-secondary);
+      color: var(--text-secondary);
+    }
+
+    /* ── CTA ── */
+    .blog-post-page .blog-cta {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      text-align: center;
+      margin: 3rem 0 1rem;
+    }
+
+    .blog-post-page .blog-cta h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post-page .blog-cta p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-post-page .blog-cta .ea-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .blog-post-page .blog-cta input[type="email"] {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 0.65rem 1rem;
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      width: 260px;
+      outline: none;
+    }
+
+    .blog-post-page .blog-cta input::placeholder { color: #555d73; }
+    .blog-post-page .blog-cta input:focus { border-color: var(--accent); }
+
+    .blog-post-page .blog-cta button {
+      background: var(--accent);
+      color: #0a0e19;
+      border: none;
+      border-radius: 6px;
+      padding: 0.65rem 1.25rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .blog-post-page .blog-cta button:hover { opacity: 0.9; }
+
+    @media (max-width: 768px) {
+      .blog-post-page .article h1 { font-size: 1.75rem; }
+      .blog-post-page .checklist { padding: 1.5rem; }
+      .blog-post-page .blog-cta input[type="email"] { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Fadi Opgenorth</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../hire-me.html">Hire Me</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../services.html">Services</a>
+    <a href="../portfolio.html">Portfolio</a>
+    <a href="../hire-me.html">Hire Me</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <div class="blog-post-page">
+    <article class="article">
+
+      <div class="article-meta">February 2026</div>
+
+      <h1>Your Automation Vendor Doesn't Know What a Subrecipient Risk Assessment Actually Requires</h1>
+
+      <p>If you manage federal awards, you've done this: opened a spreadsheet, pulled up SAM.gov in another tab, navigated to the Federal Audit Clearinghouse in a third, and started piecing together a risk assessment for a subrecipient you've worked with for years. You already know they're fine. But 2 CFR 200.332(c) doesn't care what you know — it cares what you can document.</p>
+
+      <p>Every week, another vendor pitches "automated compliance" for grants management. They'll automate your subrecipient monitoring, they say. Streamline risk assessments. Reduce manual effort.</p>
+
+      <p>Most of them have never actually performed a subrecipient risk assessment.</p>
+
+      <p>That's not a knock on engineers — they build excellent systems. But a subrecipient risk assessment under the Uniform Guidance isn't a data lookup. It's a regulatory judgment call that requires understanding what the regulation actually asks you to evaluate, why each factor matters, and how the results cascade into your monitoring plan, your subaward terms, and ultimately your single audit exposure.</p>
+
+      <h2>What the Regulation Actually Requires</h2>
+
+      <p>Section 200.332(c) requires pass-through entities to evaluate each subrecipient's <strong>fraud risk and risk of noncompliance</strong> to determine appropriate monitoring. The regulation specifies four factors to consider:</p>
+
+      <div class="callout">
+        <p><strong>1. Prior experience with the same or similar subawards.</strong> Not just "have you worked with them before" — whether the subrecipient has managed awards of similar scope, complexity, and regulatory requirements. A community nonprofit that's managed a $50K foundation grant is not automatically ready for a $500K NIH subaward with effort reporting requirements.</p>
+        <p><strong>2. Results of previous audits.</strong> This means more than checking whether they had a Single Audit. It means reviewing whether the same or similar subawards were audited as a major program, whether there were findings, and whether those findings are relevant to your award. The OIG has cited pass-through entities specifically for failing to document this review — not for failing to do it, but for failing to document it.</p>
+        <p><strong>3. New personnel or substantially changed systems.</strong> This is the factor most automation tools ignore entirely. A subrecipient that was low-risk last year may not be low-risk this year if their grants manager left and their accounting system migrated. This requires actual inquiry — you can't pull it from a database.</p>
+        <p><strong>4. Extent and results of Federal agency monitoring.</strong> If your subrecipient also receives direct federal awards, has the awarding agency conducted monitoring visits? What were the results? This information isn't in SAM.gov. It often requires asking the subrecipient directly or reviewing their correspondence with the agency.</p>
+      </div>
+
+      <p>Here's the part the automation vendors miss: these four factors don't produce a binary pass/fail. They produce a <strong>risk level</strong> that determines your entire monitoring approach — the frequency of financial report reviews, whether you require detailed transaction reports, whether you impose specific conditions under §200.208, whether you conduct site visits. Get the risk assessment wrong and your monitoring plan is either wasteful or inadequate. Both are audit findings waiting to happen.</p>
+
+      <h2>The Real Problem with Automating This</h2>
+
+      <p>The first two factors — prior experience and audit history — are partially automatable. You can build a system that pulls Single Audit data from the Federal Audit Clearinghouse, checks SAM.gov for exclusions, and flags subrecipients whose audits identified relevant findings. That's useful and worth building.</p>
+
+      <p>But factors three and four require human judgment informed by domain expertise. "Substantially changed systems" isn't a field in anyone's database. Neither is "the grants manager who understood your reporting requirements left six months ago and her replacement has never managed an NIH subaward." An automation tool that skips these factors and calls itself a "risk assessment solution" is giving you a false sense of compliance.</p>
+
+      <p>The best automation for subrecipient risk assessments doesn't replace the judgment — it structures it. It pre-populates what can be pre-populated, flags what needs human review, enforces documentation, and connects the risk rating to a tiered monitoring plan so the downstream consequences are automatic even when the assessment itself requires thought.</p>
+
+      <p>That's the kind of system I build. Not because I'm a better engineer — but because I've sat in the chair, performed these assessments by hand, reviewed the Single Audits, written the management decision letters, and explained to stakeholders why a subrecipient was rated medium instead of high.</p>
+
+      <h2>The Checklist</h2>
+
+      <p>Before you buy an automation tool for subrecipient monitoring — or hire someone to build one — use this checklist. Half of it tests whether the system covers the regulatory requirements. The other half tests whether the person building it understands why those requirements exist.</p>
+
+      <!-- PDF Lead Magnet -->
+      <div class="lead-magnet">
+        <div class="lead-magnet-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4fd1c5" stroke-width="1.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="12" y1="18" x2="12" y2="12"></line>
+            <polyline points="9 15 12 18 15 15"></polyline>
+          </svg>
+        </div>
+        <h3>Download the printable PDF version</h3>
+        <p>Take it to your next vendor meeting or share it with your team. Same 11-point checklist, formatted for print.</p>
+        <form class="lead-form" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
+          <input type="hidden" name="tag" value="checklist-lead-magnet">
+          <input type="email" name="email" placeholder="you@organization.org" required>
+          <button type="submit">Send Me the PDF</button>
+        </form>
+        <p class="lead-note">No spam. Just this PDF and occasional updates on the tools I'm building.</p>
+      </div>
+
+      <div id="checklist-interactive"></div>
+
+      <div class="checklist-section">
+
+        <div class="checklist" id="checklist">
+
+          <div class="checklist-group" data-group="regulatory">
+            <div class="checklist-group-title">Regulatory Coverage <span style="font-weight:400; text-transform:none; letter-spacing:0;">(6 items)</span></div>
+            <div class="check-item" data-group="regulatory" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Does the system verify exclusion status in SAM.gov before every subaward, per §200.332(a)?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="regulatory" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Does it pull and flag Single Audit results from the Federal Audit Clearinghouse — including whether relevant programs were audited as major programs?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="regulatory" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Does it capture prior subaward experience — not just "have we worked with them" but scope, size, and regulatory similarity?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="regulatory" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Does it include structured prompts for personnel changes and system changes at the subrecipient — the factor most tools skip?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="regulatory" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Does it capture federal agency monitoring activity and results for subrecipients who also receive direct federal awards?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="regulatory" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Does the risk rating connect to a tiered monitoring plan with defined consequences (reporting frequency, site visits, specific conditions under §200.208)?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+          </div>
+
+          <div class="checklist-group" data-group="domain">
+            <div class="checklist-group-title">Domain Expertise of the Builder <span style="font-weight:400; text-transform:none; letter-spacing:0;">(5 items)</span></div>
+            <div class="check-item" data-group="domain" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Can your vendor explain the difference between a subrecipient and a contractor under §200.331 — and why it matters for monitoring?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="domain" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Can they explain what happens when a subrecipient's Single Audit identifies a finding on a program similar to yours — and what your obligation is as pass-through entity?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="domain" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Do they understand that the $1,000,000 Single Audit threshold (raised from $750K in Oct 2024) means some subrecipients who previously required audits may no longer — and what that means for your monitoring approach?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="domain" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Can they articulate why a risk assessment isn't a one-time event — and what triggers a reassessment mid-award?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+            <div class="check-item" data-group="domain" onclick="toggleCheck(this)">
+              <div class="check-box"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg></div>
+              <span>Have they ever had to explain a subrecipient risk rating to stakeholders? To an OIG reviewer?</span>
+              <div class="flag-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            </div>
+          </div>
+
+          <!-- Score Panel -->
+          <div class="score-panel" id="score-panel">
+            <div class="score-header">
+              <span class="score-title">Your Score</span>
+              <div style="display:flex; align-items:center; gap:1rem;">
+                <span class="score-count" id="score-count">0 / 11</span>
+                <button class="reset-btn" onclick="resetChecklist()">Reset</button>
+              </div>
+            </div>
+            <div class="score-bar-track">
+              <div class="score-bar-fill" id="score-bar"></div>
+            </div>
+            <div class="score-breakdown">
+              <div class="score-group">
+                <div class="score-group-label">Regulatory Coverage</div>
+                <div class="score-group-value" id="reg-score">0 / 6</div>
+              </div>
+              <div class="score-group">
+                <div class="score-group-label">Domain Expertise</div>
+                <div class="score-group-value" id="dom-score">0 / 5</div>
+              </div>
+            </div>
+            <div class="score-verdict" id="score-verdict">
+              <p class="verdict-text">Check items above to see your assessment.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <p>If the system covers all six regulatory items and the builder can answer all five domain questions, you're probably in good hands. If not, you might be automating a process that produces documented noncompliance faster than you could produce it manually.</p>
+
+      <p>The technology isn't the hard part. Understanding what to automate — and what still requires a human who has actually done this work — is.</p>
+
+      <!-- CTA -->
+      <div class="blog-cta">
+        <h3>I'm building this exact system.</h3>
+        <p>Subrecipient risk scoring, SAM.gov monitoring, and compliance documentation — designed by someone who's performed these assessments by hand. Get early access.</p>
+        <form class="ea-form" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
+          <input type="hidden" name="tag" value="early-access">
+          <input type="email" name="email" placeholder="you@organization.org" required>
+          <button type="submit">Get Early Access</button>
+        </form>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/fadi-opgenorth-cpa-mba/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Fadi-HVAIH" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:fadi@fadiopgenorth.com">fadi@fadiopgenorth.com</a>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../services.html">Services</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../hire-me.html">Hire Me</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <form class="form-inline" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
+            <input type="email" name="email" placeholder="AI + finance insights" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Fadi Opgenorth, CPA/MBA
+        <p style="font-size: 0.75rem; max-width: 700px; margin: 0.75rem auto 0; color: var(--text-muted); line-height: 1.5;">Fadi Opgenorth holds CPA License #15395 (Oregon). This website and its operator do not offer, provide, or hold out to provide public accounting, attestation, compilation, audit, tax preparation, or any other services requiring licensure under ORS Chapter 673 and OAR Chapter 801. No CPA-client relationship is created by visiting this site, submitting forms, subscribing to the newsletter, or scheduling calls.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;"><a href="../privacy.html">Privacy Policy</a> | <a href="../terms.html">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    var TOTAL = 11;
+    var REG_TOTAL = 6;
+    var DOM_TOTAL = 5;
+
+    function toggleCheck(item) {
+      var box = item.querySelector('.check-box');
+      var text = item.querySelector('span');
+      box.classList.toggle('checked');
+      text.classList.toggle('checked-text');
+      item.classList.remove('flagged');
+      updateScore();
+    }
+
+    function updateScore() {
+      var allItems = document.querySelectorAll('.check-item');
+      var regChecked = document.querySelectorAll('.check-item[data-group="regulatory"] .check-box.checked').length;
+      var domChecked = document.querySelectorAll('.check-item[data-group="domain"] .check-box.checked').length;
+      var total = regChecked + domChecked;
+      var pct = Math.round((total / TOTAL) * 100);
+
+      document.getElementById('score-count').textContent = total + ' / ' + TOTAL;
+      document.getElementById('reg-score').textContent = regChecked + ' / ' + REG_TOTAL;
+      document.getElementById('dom-score').textContent = domChecked + ' / ' + DOM_TOTAL;
+
+      var bar = document.getElementById('score-bar');
+      bar.style.width = pct + '%';
+
+      var panel = document.getElementById('score-panel');
+      var count = document.getElementById('score-count');
+      panel.className = 'score-panel';
+      bar.className = 'score-bar-fill';
+      count.className = 'score-count';
+
+      var tier;
+      if (total === TOTAL) {
+        tier = 'good';
+      } else if (total >= 7) {
+        tier = 'warn';
+      } else {
+        tier = 'bad';
+      }
+
+      panel.classList.add('score-' + tier);
+      bar.classList.add(tier);
+      count.classList.add(tier);
+
+      if (total > 0) {
+        allItems.forEach(function(item) {
+          var isChecked = item.querySelector('.check-box').classList.contains('checked');
+          if (!isChecked) {
+            item.classList.add('flagged');
+          } else {
+            item.classList.remove('flagged');
+          }
+        });
+      }
+
+      var verdict = document.getElementById('score-verdict');
+      if (total === 0) {
+        verdict.innerHTML = '<p class="verdict-text">Check items above to see your assessment.</p>';
+      } else if (total === TOTAL) {
+        verdict.innerHTML = '<p class="verdict-text"><strong>All clear.</strong> The system covers the regulatory requirements and the builder understands the domain. You\'re probably in good hands.</p>';
+      } else if (regChecked === REG_TOTAL && domChecked < DOM_TOTAL) {
+        verdict.innerHTML = '<p class="verdict-text"><strong>The system looks solid, but the builder has domain gaps.</strong> ' + (DOM_TOTAL - domChecked) + ' domain expertise item' + (DOM_TOTAL - domChecked > 1 ? 's' : '') + ' unchecked. The system may cover the requirements today, but without domain understanding it won\'t adapt when regulations change or edge cases arise.</p>';
+      } else if (regChecked < REG_TOTAL && domChecked === DOM_TOTAL) {
+        verdict.innerHTML = '<p class="verdict-text"><strong>The builder knows the domain, but the system has regulatory blind spots.</strong> ' + (REG_TOTAL - regChecked) + ' regulatory item' + (REG_TOTAL - regChecked > 1 ? 's' : '') + ' unchecked. The expertise is there to fix this — make sure the gaps get addressed before you rely on the system for compliance.</p>';
+      } else if (total >= 7) {
+        verdict.innerHTML = '<p class="verdict-text"><strong>Getting there, but gaps remain in both areas.</strong> ' + (REG_TOTAL - regChecked) + ' regulatory and ' + (DOM_TOTAL - domChecked) + ' domain item' + ((REG_TOTAL - regChecked) + (DOM_TOTAL - domChecked) > 1 ? 's' : '') + ' unchecked. Review the flagged items — each one represents a potential audit finding or a system that produces confident wrong answers.</p>';
+      } else {
+        verdict.innerHTML = '<p class="verdict-text"><strong>Significant gaps.</strong> Only ' + total + ' of ' + TOTAL + ' items covered. This system or vendor isn\'t ready for regulated subrecipient monitoring. You may be automating a process that produces documented noncompliance faster than you could produce it manually.</p>';
+      }
+    }
+
+    function resetChecklist() {
+      document.querySelectorAll('.check-item').forEach(function(item) {
+        item.querySelector('.check-box').classList.remove('checked');
+        item.querySelector('span').classList.remove('checked-text');
+        item.classList.remove('flagged');
+      });
+      updateScore();
+    }
+  </script>
+</body>
+</html>
