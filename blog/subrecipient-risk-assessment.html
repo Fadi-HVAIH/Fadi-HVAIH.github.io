@@ -144,6 +144,12 @@
 
     .blog-post-page .lead-form button:hover { opacity: 0.9; transform: translateY(-1px); }
 
+    .blog-post-page .success-msg {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
     .blog-post-page .lead-note {
       font-size: 0.75rem !important;
       color: var(--text-muted) !important;
@@ -531,6 +537,9 @@
           <input type="email" id="lead-email" name="email" placeholder="you@organization.org" required />
           <button type="submit">Send Me the PDF</button>
         </form>
+        <div id="lead-success" style="display: none;">
+          <p class="success-msg">Your PDF is downloading. While you're here — <a href="#checklist-interactive">try the interactive version below.</a></p>
+        </div>
         <p class="lead-note">No spam. Just this PDF and occasional updates on the tools I'm building.</p>
       </div>
 
@@ -697,17 +706,24 @@
     function handleLeadSubmit(e) {
       e.preventDefault();
       var email = document.getElementById('lead-email').value;
+
+      // Open PDF immediately (synchronous) to avoid popup blockers
+      window.open('https://fadi-hvaih.github.io/files/subrecipient-risk-assessment-checklist.pdf', '_blank');
+
+      // Subscribe in background — fire and forget
       var form = new FormData();
       form.append('email', email);
       form.append('tag', 'checklist-lead-magnet');
       fetch('https://buttondown.com/api/emails/embed-subscribe/opgenorth', {
         method: 'POST',
         body: form
-      }).then(function() {
-        window.location.href = 'https://fadi-hvaih.github.io/files/subrecipient-risk-assessment-checklist.pdf';
       }).catch(function() {
-        window.location.href = 'https://fadi-hvaih.github.io/files/subrecipient-risk-assessment-checklist.pdf';
+        // Subscription failed silently — user already has the PDF
       });
+
+      // Update UI
+      document.getElementById('lead-form').style.display = 'none';
+      document.getElementById('lead-success').style.display = 'block';
     }
 
     var TOTAL = 11;
