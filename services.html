@@ -6,6 +6,368 @@
   <title>Services — Fadi Opgenorth</title>
   <meta name="description" content="AI automation services for nonprofit financial operations: grants reporting, financial close, compliance documentation, audit prep, and more.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
+
+  /* ── SERVICES PAGE STYLES ── */
+  .services-page .hero {
+    text-align: center;
+    padding: 5rem 0 4rem;
+  }
+
+  .services-page .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.75rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-page .hero .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 1.75rem;
+    line-height: 1.7;
+  }
+
+  .services-page .hero .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--accent, #4fd1c5);
+    font-weight: 500;
+  }
+
+  .services-page .hero .status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent, #4fd1c5);
+    border-radius: 50%;
+    animation: svc-pulse 2s infinite;
+  }
+
+  @keyframes svc-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ── PAIN STRIP ── */
+  .pain-strip {
+    padding: 3rem 0;
+  }
+
+  .pain-strip .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .pain-item {
+    padding: 0 0.5rem;
+  }
+
+  .pain-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    color: var(--accent, #4fd1c5);
+    margin-bottom: 0.5rem;
+  }
+
+  .pain-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent, #4fd1c5);
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 3rem;
+  }
+
+  /* ── SERVICE CARDS ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 1.75rem;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent, #4fd1c5);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .service-card .pain-hook {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    font-style: italic;
+  }
+
+  .service-card p {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  /* ── PROOF SECTION ── */
+  .proof {
+    padding: 4.5rem 0;
+  }
+
+  .proof-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 3rem 3.5rem;
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .proof-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2.5rem;
+    right: 2.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent, #4fd1c5), transparent);
+    border-radius: 2px;
+  }
+
+  .proof-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent, #4fd1c5);
+    margin-bottom: 1.25rem;
+  }
+
+  .proof-quote {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .proof-metric {
+    display: inline-block;
+    background: rgba(79, 209, 197, 0.12);
+    border: 1px solid rgba(79, 209, 197, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent, #4fd1c5);
+  }
+
+  /* ── HOW IT WORKS ── */
+  .services-page .how-it-works {
+    padding: 5rem 0;
+  }
+
+  .services-page .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-page .step {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .services-page .step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(79, 209, 197, 0.12);
+    border: 2px solid var(--accent, #4fd1c5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent, #4fd1c5);
+    margin-bottom: 1.25rem;
+  }
+
+  .services-page .step h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .services-page .step p {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  .services-page .step .reassurance {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.6rem;
+  }
+
+  .pricing-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  /* ── EARLY ACCESS CTA ── */
+  .early-access {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .ea-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .ea-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ea-card .ea-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+  }
+
+  .ea-form {
+    display: flex;
+    gap: 0.65rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .ea-form input[type="email"] {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1.1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    width: 280px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .ea-form input::placeholder { color: var(--text-muted); }
+  .ea-form input:focus { border-color: var(--accent, #4fd1c5); }
+
+  .ea-form button {
+    background: var(--accent, #4fd1c5);
+    color: #0a0e19;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.75rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+
+  .ea-form button:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  /* ── BOTTOM CTA ── */
+  .bottom-cta {
+    text-align: center;
+    padding: 4rem 0 3rem;
+  }
+
+  .bottom-cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── REGULATORY FOOTER ── */
+  .reg-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .reg-footer .credential-line {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
+
+  .reg-footer p {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .services-page .hero h1 { font-size: 2rem; }
+    .pain-strip .inner,
+    .services-grid,
+    .services-page .steps { grid-template-columns: 1fr; }
+    .proof-card { padding: 2rem 1.75rem; }
+    .ea-form input[type="email"] { width: 100%; }
+  }
+  </style>
 </head>
 <body>
 
@@ -37,97 +399,169 @@
     <a href="contact.html">Contact</a>
   </div>
 
+  <div class="services-page">
+
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>AI Automation for Nonprofit Financial Operations</h1>
-      <p>I'm building systems designed to eliminate the manual work draining your finance team — so they can focus on the mission, not the spreadsheets.</p>
-      <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted);">Launching 2026 · Accepting pilot clients</p>
+      <h1>Your Finance Team Is Drowning in Manual Work That Should Be Automated</h1>
+      <p class="subtitle">
+        I build AI-powered systems that eliminate the reporting, reconciliation, and compliance busywork
+        draining your finance team — so they can focus on the mission, not the spreadsheets.
+      </p>
+      <span class="status">Now working with select pilot clients</span>
     </div>
   </section>
 
-  <!-- Regulatory Notice -->
-  <section>
+  <!-- Pain Strip -->
+  <section class="pain-strip">
     <div class="container">
-      <div style="border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; background: var(--bg-card); font-size: 0.85rem; line-height: 1.6; color: var(--text-muted);">
-        <strong style="color: var(--text-primary);">Regulatory Notice:</strong> All services described on this page are AI automation and technology consulting services only. Nothing on this page or elsewhere on this site constitutes or should be construed as the practice of public accountancy, attestation services, compilation services, or the issuance of reports on financial statements as defined under ORS 673.320 and OAR Chapter 801. Any engagement for services described herein is governed by a separate written agreement and does not include the performance of any services requiring CPA licensure.
+      <div class="inner">
+        <div class="pain-item">
+          <div class="pain-number">2–3 weeks</div>
+          <p>Average time nonprofit finance teams spend on monthly close and reporting cycles</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-number">60%</div>
+          <p>Of grants compliance work is manual data gathering that could be automated today</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-number">$0</div>
+          <p>What most organizations invest in automation — until the audit finding forces their hand</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Vertical 1: Nonprofits -->
+  <!-- Proof -->
+  <section class="proof">
+    <div class="container">
+      <div class="proof-card">
+        <div class="proof-eyebrow">From the Field</div>
+        <p class="proof-quote">
+          At a not-for-profit institution, I rebuilt the community benefit reporting process for research —
+          a complex, regulation-driven calculation that previously required weeks of manual Excel work across
+          disconnected ERP modules. I engineered a unified data asset in Snowflake, automated regulatory
+          enrichment and multi-step cost allocation logic in Power BI, and delivered a real-time dashboard
+          that provided stakeholders with full auditability of every input and calculation.
+        </p>
+        <div class="proof-metric">What used to take two weeks now updates in near real time.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
   <section>
     <div class="container">
-      <div class="section-header">
-        <span class="vertical-label">Vertical 1</span>
-        <h2>Nonprofits &amp; Grants Organizations</h2>
-        <p>For organizations managing $1M–$10M+ in federal awards and foundation grants</p>
+      <div class="section-label">What I Build</div>
+      <h2 class="section-title">Nonprofits &amp; Grants Organizations</h2>
+      <p class="section-subtitle">For organizations managing $1M–$10M+ in federal awards and foundation grants</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Grants Reporting Automation</h3>
+          <p class="pain-hook">Stop compiling federal reports from five different exports.</p>
+          <p>Automated workflows that pull from your ERP, grant management platform, and GL to produce federal financial reports — with every number traceable back to its source.</p>
+        </div>
+        <div class="service-card">
+          <h3>Data Integration &amp; Harmonization</h3>
+          <p class="pain-hook">Your systems don't talk to each other. That's where we start.</p>
+          <p>We connect disconnected ERPs, grant platforms, and general ledgers into unified data assets — so your compliance, reporting, and dashboard tools have a single source of truth to pull from.</p>
+        </div>
+        <div class="service-card">
+          <h3>Compliance Documentation</h3>
+          <p class="pain-hook">Prove you're compliant before anyone asks.</p>
+          <p>2 CFR 200 compliance evidence packages that build as transactions occur. Every cost allocation, every approval, every threshold check — documented and designed to support audit readiness.</p>
+        </div>
       </div>
 
-      <div class="service-list">
-        <div class="service-item">
-          <h4>Grants Reporting Automation</h4>
-          <p>Federal financial report preparation workflows designed to reduce manual compilation from multiple data sources.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Audit Prep Packaging</h3>
+          <p class="pain-hook">Stop scrambling when the auditors call.</p>
+          <p>Automated data aggregation for single audit support — SEFA source data, document requests, and support schedules organized and staged before the auditors even ask. Your team reviews and finalizes; the system does the assembly.</p>
         </div>
-        <div class="service-item">
-          <h4>Financial Close &amp; Reconciliation</h4>
-          <p>Monthly close processes designed to run with minimal human intervention. Bank reconciliation, grant-to-GL matching, variance flagging — automated.</p>
+        <div class="service-card">
+          <h3>Board &amp; Funder Dashboards</h3>
+          <p class="pain-hook">Give your board visibility without burying your team.</p>
+          <p>Real-time financial dashboards that give your board and funders the visibility they want — without your team spending 20 hours building slide decks every quarter.</p>
         </div>
-        <div class="service-item">
-          <h4>Compliance Documentation</h4>
-          <p>2 CFR 200 compliance evidence packages designed to build as transactions occur. Always audit-ready.</p>
+        <div class="service-card">
+          <h3>Subrecipient Monitoring</h3>
+          <p class="pain-hook">Know your subrecipient risk before it becomes your audit finding.</p>
+          <p>Automated risk assessments, SAM.gov exclusion tracking, compliance monitoring, and reporting workflows for your sub-awards — continuous, not once-a-year.</p>
         </div>
-        <div class="service-item">
-          <h4>Audit Prep Packaging</h4>
-          <p>Single audit support schedules, SEFA preparation, and document requests organized and delivered before the auditors even ask.</p>
-        </div>
-        <div class="service-item">
-          <h4>Board &amp; Funder Dashboards</h4>
-          <p>Real-time financial dashboards that give your board and funders the visibility they want without your team spending 20 hours building slide decks.</p>
-        </div>
-        <div class="service-item">
-          <h4>Subrecipient Monitoring</h4>
-          <p>Automated risk assessments, compliance tracking, and reporting workflows for your sub-awards.</p>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access -->
+  <section class="early-access">
+    <div class="container">
+      <div class="ea-card">
+        <h3>New Tools in Active Development</h3>
+        <p class="ea-sub">Suspension &amp; debarment monitoring, grants risk scoring, and compliance documentation engines. Join the early access list to test them first — and help shape what gets built.</p>
+        <form class="ea-form" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
+          <input type="email" name="email" placeholder="you@organization.org" required>
+          <button type="submit">Get Early Access</button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section>
+  <section class="how-it-works">
     <div class="container">
-      <div class="section-header">
-        <h2>How It Works</h2>
-      </div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Low risk, high clarity — at every step.</p>
+
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
           <h3>Discovery Call</h3>
           <p>Free, 30 minutes. We talk about what's eating your finance team's time. I ask about your systems, your pain points, and where manual processes are killing you.</p>
+          <p class="reassurance">No commitment. No pitch deck.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
           <h3>Paid Pilot</h3>
           <p>I build one fully automated workflow and deliver it working. Plus a roadmap for everything else. You see real results before committing to anything long-term.</p>
+          <p class="reassurance">You own everything I build, regardless of whether we continue.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
           <h3>Monthly Retainer</h3>
-          <p>Ongoing automation buildout, monitoring, and optimization. Your operations get better every month.</p>
+          <p>Ongoing automation buildout, monitoring, and optimization. Your operations get better every month — and your team gets their time back.</p>
+          <p class="reassurance">Cancel anytime. No lock-in contracts.</p>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 2rem; color: var(--text-muted);">Pricing discussed on discovery call.</p>
+      <p class="pricing-note">Pricing discussed on discovery call.</p>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section>
-    <div class="container" style="text-align: center;">
-      <h2>Ready to stop doing it manually?</h2>
-      <br>
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2>Your next single audit doesn't have to be a fire drill.</h2>
       <a href="https://cal.com/fadi-opgenorth/discovery" class="btn btn-primary" target="_blank" rel="noopener">Book a Discovery Call</a>
     </div>
   </section>
+
+  </div><!-- /.services-page -->
+
+  <!-- Regulatory Notice -->
+  <div class="container">
+    <div class="reg-footer">
+      <p class="credential-line">Fadi Opgenorth, CPA, MBA</p>
+      <p>
+        <strong>Regulatory Notice:</strong> All services described on this page are AI automation and technology consulting services only.
+        Happy Valley AI Holdings is not a registered public accounting firm. Nothing on this page or elsewhere on this site constitutes
+        or should be construed as the practice of public accountancy, attestation services, compilation services, or the issuance of
+        reports on financial statements as defined under ORS 673.320 and OAR Chapter 801. Any engagement for services described herein
+        is governed by a separate written agreement and does not include the performance of any services requiring CPA licensure.
+      </p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
