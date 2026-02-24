@@ -527,10 +527,8 @@
         </div>
         <h3>Download the printable PDF version</h3>
         <p>Take it to your next vendor meeting or share it with your team. Same 11-point checklist, formatted for print.</p>
-        <form class="lead-form" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
-          <input type="hidden" name="tag" value="checklist-lead-magnet">
-          <input type="hidden" name="redirect_url" value="https://fadi-hvaih.github.io/files/subrecipient-risk-assessment-checklist.pdf">
-          <input type="email" name="email" placeholder="you@organization.org" required>
+        <form class="lead-form" id="lead-form" onsubmit="handleLeadSubmit(event)">
+          <input type="email" id="lead-email" name="email" placeholder="you@organization.org" required />
           <button type="submit">Send Me the PDF</button>
         </form>
         <p class="lead-note">No spam. Just this PDF and occasional updates on the tools I'm building.</p>
@@ -696,6 +694,22 @@
 
   <script src="../js/main.js"></script>
   <script>
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      var email = document.getElementById('lead-email').value;
+      var form = new FormData();
+      form.append('email', email);
+      form.append('tag', 'checklist-lead-magnet');
+      fetch('https://buttondown.com/api/emails/embed-subscribe/opgenorth', {
+        method: 'POST',
+        body: form
+      }).then(function() {
+        window.location.href = 'https://fadi-hvaih.github.io/files/subrecipient-risk-assessment-checklist.pdf';
+      }).catch(function() {
+        window.location.href = 'https://fadi-hvaih.github.io/files/subrecipient-risk-assessment-checklist.pdf';
+      });
+    }
+
     var TOTAL = 11;
     var REG_TOTAL = 6;
     var DOM_TOTAL = 5;
