@@ -31,7 +31,9 @@
   }
 
   /* ── WHAT I BRING ── */
-  .hire-page .what-i-bring { padding: 3rem 0 4.5rem; }
+  .hire-page section { padding: 3.5rem 0; }
+
+  .hire-page .what-i-bring { padding: 2.5rem 0 3rem; }
 
   .hire-page .section-title {
     font-family: 'DM Serif Display', serif;
@@ -100,6 +102,12 @@
     line-height: 1.3;
   }
 
+  .exp-card-header .role {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.15rem;
+  }
+
   .exp-card-header .dates {
     font-size: 0.8rem;
     color: var(--text-muted);
@@ -147,6 +155,51 @@
   .exp-card-body p {
     font-size: 0.875rem;
     line-height: 1.7;
+  }
+
+  /* ── APPROACH ── */
+  .hire-page .approach {
+    padding: 4rem 0;
+  }
+
+  .approach-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .approach-step {
+    text-align: center;
+    padding: 0 0.75rem;
+  }
+
+  .approach-step .step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    border: 2px solid var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .approach-step h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .approach-step p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
   }
 
   /* ── TAGS ── */
@@ -235,6 +288,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .hire-page .hero h1 { font-size: 2rem; }
+    .approach-steps { grid-template-columns: 1fr; }
     .experience-grid,
     .experience-grid.bottom-row { grid-template-columns: 1fr; }
     .hire-page .cta-row { flex-direction: column; align-items: center; }
@@ -307,6 +361,35 @@
     </div>
   </section>
 
+  <!-- How I Approach Problems -->
+  <section class="approach">
+    <div class="container">
+      <h2 class="section-title">How I Approach Problems</h2>
+      <div class="approach-steps">
+        <div class="approach-step">
+          <div class="step-number">1</div>
+          <h3>Map the Regulatory Landscape</h3>
+          <p>Identify which regulations, standards, and reporting requirements apply before touching any data or building anything. The compliance framework defines the solution — not the other way around.</p>
+        </div>
+        <div class="approach-step">
+          <div class="step-number">2</div>
+          <h3>Audit Existing Resources</h3>
+          <p>Understand what systems, data, and processes already exist — and what doesn't — across finance, IT, and program teams. Most organizations have more raw material than they realize; they just lack the structure.</p>
+        </div>
+        <div class="approach-step">
+          <div class="step-number">3</div>
+          <h3>Design the Data Layer</h3>
+          <p>Build the structured, governed data assets that make everything downstream possible. Reporting, dashboards, automation, and compliance documentation all depend on this foundation.</p>
+        </div>
+        <div class="approach-step">
+          <div class="step-number">4</div>
+          <h3>Build and Iterate</h3>
+          <p>Deliver working automation, then optimize based on real operational feedback. Every system I build is designed to evolve as regulations change and organizational needs shift.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Key Experience -->
   <section>
     <div class="container">
@@ -318,6 +401,7 @@
           <div class="exp-card-header">
             <div>
               <div class="org">Providence Health &amp; Services</div>
+              <div class="role">Principal Grants &amp; Contracts Administrator</div>
               <div class="dates">Mar 2019 – Dec 2024</div>
             </div>
             <div class="toggle-icon">
@@ -334,6 +418,7 @@
           <div class="exp-card-header">
             <div>
               <div class="org">OHSU</div>
+              <div class="role">Research Compliance Analyst</div>
               <div class="dates">May 2014 – May 2018</div>
             </div>
             <div class="toggle-icon">
@@ -350,6 +435,7 @@
           <div class="exp-card-header">
             <div>
               <div class="org">Metro Regional Government</div>
+              <div class="role">Financial Operations Analyst</div>
               <div class="dates">May 2018 – Feb 2019</div>
             </div>
             <div class="toggle-icon">
@@ -368,7 +454,8 @@
           <div class="exp-card-header">
             <div>
               <div class="org">Deloitte</div>
-              <div class="dates">Audit Senior Associate | Oct 2009 – Jun 2011</div>
+              <div class="role">Audit Senior Associate</div>
+              <div class="dates">Oct 2009 – Jun 2011</div>
             </div>
             <div class="toggle-icon">
               <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
