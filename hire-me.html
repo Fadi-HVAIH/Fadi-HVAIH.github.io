@@ -68,30 +68,16 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 0.75rem;
   }
 
   .exp-card {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
-    border-bottom: none;
+    border-radius: 12px;
     overflow: hidden;
     transition: border-color 0.3s ease;
     cursor: pointer;
-  }
-
-  .exp-card:first-child {
-    border-radius: 12px 12px 0 0;
-  }
-
-  .exp-card:last-child {
-    border-bottom: 1px solid var(--border-subtle);
-    border-radius: 0 0 12px 12px;
-  }
-
-  .exp-card:only-child {
-    border-radius: 12px;
-    border-bottom: 1px solid var(--border-subtle);
   }
 
   .exp-card:hover {
