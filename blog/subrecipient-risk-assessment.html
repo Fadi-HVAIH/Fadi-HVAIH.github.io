@@ -238,8 +238,8 @@
     .blog-post-page .check-box.checked svg { opacity: 1; }
 
     .blog-post-page .check-item span.checked-text {
-      text-decoration: line-through;
-      color: var(--text-muted);
+      text-decoration: none;
+      color: var(--text-secondary);
     }
 
     /* ── SCORE PANEL ── */
@@ -342,7 +342,7 @@
 
     /* Flags on unchecked items */
     .blog-post-page .check-item.flagged span {
-      color: #e76f51;
+      color: var(--text-secondary);
     }
 
     .blog-post-page .flag-icon {
@@ -353,8 +353,7 @@
     }
 
     .blog-post-page .check-item.flagged .flag-icon {
-      display: flex;
-      align-items: center;
+      display: none;
     }
 
     .blog-post-page .flag-icon svg {
