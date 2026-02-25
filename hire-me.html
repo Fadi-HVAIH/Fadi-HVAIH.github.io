@@ -214,11 +214,11 @@
   .hire-page .tag {
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--accent, #4fd1c5);
-    border: 1px solid rgba(79, 209, 197, 0.3);
+    color: var(--text-secondary);
+    border: none;
     border-radius: 20px;
     padding: 0.4rem 1rem;
-    background: rgba(79, 209, 197, 0.12);
+    background: rgba(255, 255, 255, 0.04);
   }
 
   /* ── WHAT I'M LOOKING FOR ── */
@@ -397,7 +397,7 @@
 
       <div class="experience-grid">
         <!-- Providence -->
-        <div class="exp-card" onclick="toggleCard(this)">
+        <div class="exp-card open" onclick="toggleCard(this)">
           <div class="exp-card-header">
             <div>
               <div class="org">Providence Health &amp; Services</div>
@@ -410,23 +410,6 @@
           </div>
           <div class="exp-card-body">
             <p>Built the reporting and data infrastructure for research finance across a $250M+ annual research portfolio. Designed analytics-ready datasets in Snowflake and Power BI on top of Oracle Fusion (PPM, GL, AP, AR, Contracts, Awards) — creating governed, auditable reporting layers where only disconnected ERP data and manual Excel processes existed before. Increased downstream finance process efficiency by over 75%, reduced ad-hoc reporting requests by 90%, and cut regulatory reporting turnaround by 73%.</p>
-          </div>
-        </div>
-
-        <!-- OHSU -->
-        <div class="exp-card" onclick="toggleCard(this)">
-          <div class="exp-card-header">
-            <div>
-              <div class="org">OHSU</div>
-              <div class="role">Research Compliance Analyst</div>
-              <div class="dates">May 2014 – May 2018</div>
-            </div>
-            <div class="toggle-icon">
-              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </div>
-          </div>
-          <div class="exp-card-body">
-            <p>Managed the subrecipient monitoring program for over $35M in annual federal funding across federal, nonfederal, and foundation-funded awards. Performed pre-subaward risk assessments, led single audit reviews for subrecipients, and led policy and process updates in response to regulatory changes — serving as the go-to resource for federal financial compliance across departments. In an earlier role, redesigned the indirect cost negotiation process end-to-end, cutting administrative processing time by 25% and increasing OHSU's negotiation fee recovery by 120%.</p>
           </div>
         </div>
 
@@ -444,6 +427,23 @@
           </div>
           <div class="exp-card-body">
             <p>Managed the full federal grant lifecycle for programs representing ~$5.2M in annual funding, interfacing directly with FTA grant managers from application through subgrant execution and financial reporting. Identified noncompliance in grant advance processes and designed and implemented internal controls to remediate the risk and prevent recurrence.</p>
+          </div>
+        </div>
+
+        <!-- OHSU -->
+        <div class="exp-card" onclick="toggleCard(this)">
+          <div class="exp-card-header">
+            <div>
+              <div class="org">OHSU</div>
+              <div class="role">Research Compliance Analyst</div>
+              <div class="dates">May 2014 – May 2018</div>
+            </div>
+            <div class="toggle-icon">
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <p>Managed the subrecipient monitoring program for over $35M in annual federal funding across federal, nonfederal, and foundation-funded awards. Performed pre-subaward risk assessments, led single audit reviews for subrecipients, and led policy and process updates in response to regulatory changes — serving as the go-to resource for federal financial compliance across departments. In an earlier role, redesigned the indirect cost negotiation process end-to-end, cutting administrative processing time by 25% and increasing OHSU's negotiation fee recovery by 120%.</p>
           </div>
         </div>
       </div>
@@ -549,11 +549,11 @@
   <script src="js/main.js"></script>
   <script>
     function toggleCard(card) {
-      const wasOpen = card.classList.contains('open');
-      document.querySelectorAll('.exp-card').forEach(c => c.classList.remove('open'));
-      if (!wasOpen) {
-        card.classList.add('open');
+      if (card.classList.contains('open')) {
+        return; // Don't allow closing the currently open card
       }
+      document.querySelectorAll('.exp-card').forEach(c => c.classList.remove('open'));
+      card.classList.add('open');
     }
   </script>
 </body>
