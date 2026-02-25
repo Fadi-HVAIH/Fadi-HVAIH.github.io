@@ -33,17 +33,4 @@
     }
   });
 
-  // --- Contact Form Handler ---
-  var contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      // TODO: Replace with real form endpoint (Formspree, Netlify Forms, etc.)
-      // Example Formspree: change form action to https://formspree.io/f/YOUR_FORM_ID
-      var formData = new FormData(contactForm);
-      var name = formData.get('name');
-      alert('Thanks, ' + name + '! Your message has been noted. (Form backend not yet connected — see code comments for setup.)');
-      contactForm.reset();
-    });
-  }
 })();
