@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fadi Opgenorth — AI Automation for Nonprofit Finance</title>
   <meta name="description" content="CPA/MBA with 15 years in nonprofit finance, now building AI-powered automation for grants compliance, financial close, and federal awards management.">
+  <meta property="og:title" content="Fadi Opgenorth — AI Automation for Nonprofit Finance">
+  <meta property="og:description" content="CPA/MBA with 15 years in nonprofit finance, now building AI-powered automation for grants compliance, financial close, and federal awards management.">
+  <meta property="og:url" content="https://fadiopgenorth.com/index.html">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +18,7 @@
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">Fadi Opgenorth</a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="product-roadmap.html">Product Roadmap</a>
@@ -27,7 +31,7 @@
     </div>
   </nav>
   <div class="mobile-nav">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="product-roadmap.html">Product Roadmap</a>
@@ -62,31 +66,37 @@
         <p style="margin-top: 0.5rem; color: var(--text-muted);">Now accepting pilot clients</p>
       </div>
       <div class="card-grid">
-        <div class="card">
-          <h3>Suspension &amp; Debarment Monitoring</h3>
-          <p>Automated tracking of SAM.gov exclusion records and real-time alerts for subrecipient risk — so you catch debarment flags before they become audit findings, not after.</p>
-          <p><a href="product-roadmap.html">Learn more &rarr;</a></p>
-        </div>
-        <div class="card">
-          <h3>Grants Risk Scoring Dashboard</h3>
-          <p>AI-driven risk profiles for subrecipients combining financial health, compliance history, and exclusion status into a single score your team can act on immediately.</p>
-          <p><a href="product-roadmap.html">Learn more &rarr;</a></p>
-        </div>
-        <div class="card">
-          <h3>Compliance Documentation Engine</h3>
-          <p>Auto-generated verification records, due diligence checklists, and audit-ready documentation packages that prove you checked — every time, every award.</p>
-          <p><a href="product-roadmap.html">Learn more &rarr;</a></p>
-        </div>
+        <a href="product-roadmap.html" class="card-link">
+          <div class="card">
+            <h3>Suspension &amp; Debarment Monitoring</h3>
+            <p>Automated tracking of SAM.gov exclusion records and real-time alerts for subrecipient risk — so you catch debarment flags before they become audit findings, not after.</p>
+            <p class="card-action">Learn more &rarr;</p>
+          </div>
+        </a>
+        <a href="product-roadmap.html" class="card-link">
+          <div class="card">
+            <h3>Grants Risk Scoring Dashboard</h3>
+            <p>AI-driven risk profiles for subrecipients combining financial health, compliance history, and exclusion status into a single score your team can act on immediately.</p>
+            <p class="card-action">Learn more &rarr;</p>
+          </div>
+        </a>
+        <a href="product-roadmap.html" class="card-link">
+          <div class="card">
+            <h3>Compliance Documentation Engine</h3>
+            <p>Auto-generated verification records, due diligence checklists, and audit-ready documentation packages that prove you checked — every time, every award.</p>
+            <p class="card-action">Learn more &rarr;</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Early Access CTA -->
-  <section style="background: var(--bg-dark, #1a1a2e); color: #fff; padding: 3rem 0;">
-    <div class="container" style="text-align: center;">
-      <h2 style="color: #fff; margin-bottom: 0.5rem;">These tools are in active development.</h2>
-      <p style="color: rgba(255,255,255,0.75); margin-bottom: 1.5rem;">Join the early access list to test them first — and help shape what gets built.</p>
-      <form class="form-inline" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url" style="justify-content: center;">
+  <section class="early-access-cta">
+    <div class="container">
+      <h2>These tools are in active development.</h2>
+      <p>Join the early access list to test them first — and help shape what gets built.</p>
+      <form class="form-inline" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
         <input type="email" name="email" placeholder="you@organization.org" required>
         <button type="submit">Get Early Access</button>
       </form>

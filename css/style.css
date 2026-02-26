@@ -21,6 +21,9 @@
   --max-width: 1140px;
   --radius: 8px;
   --transition: 0.2s ease;
+  --border-subtle: #1e293b;
+  --border-hover: #475569;
+  --accent-dim: rgba(20, 184, 166, 0.12);
 }
 
 /* --- Reset --- */
@@ -747,6 +750,74 @@ section {
   letter-spacing: 0.08em;
   color: var(--accent);
   margin-bottom: 0.75rem;
+}
+
+/* --- Clickable Card Link --- */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link .card-action {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  transition: transform var(--transition);
+}
+
+.card-link:hover .card-action {
+  transform: translateX(4px);
+}
+
+/* --- Static Card (no hover) --- */
+.card-static:hover {
+  border-color: var(--border);
+}
+
+/* --- Early Access CTA --- */
+.early-access-cta {
+  background: var(--bg-secondary);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.early-access-cta h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.early-access-cta p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.early-access-cta .form-inline {
+  justify-content: center;
+}
+
+/* --- Legal Table --- */
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.legal-table thead tr {
+  border-bottom: 2px solid var(--border);
+}
+
+.legal-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-table th,
+.legal-table td {
+  text-align: left;
+  padding: 0.75rem;
 }
 
 /* ========================================
