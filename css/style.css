@@ -774,6 +774,10 @@ section {
 /* --- Static Card (no hover) --- */
 .card-static:hover {
   border-color: var(--border);
+  transform: none;
+  box-shadow: none;
+  background: var(--bg-secondary);
+  cursor: default;
 }
 
 /* --- Early Access CTA --- */
