@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subrecipient or Contractor? A Practitioner's Guide to the §200.331 Determination — Fadi Opgenorth</title>
+  <meta name="description" content="A practitioner's guide to the 2 CFR §200.331 subrecipient vs. contractor determination — with ten indicators explained in plain language and a free downloadable worksheet.">
+  <meta property="og:title" content="Subrecipient or Contractor? A Practitioner's Guide to the §200.331 Determination — Fadi Opgenorth">
+  <meta property="og:description" content="A practitioner's guide to the 2 CFR §200.331 subrecipient vs. contractor determination — with ten indicators explained in plain language and a free downloadable worksheet.">
+  <meta property="og:url" content="https://fadiopgenorth.com/blog/subrecipient-vs-contractor.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-post-page .article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12rem 2rem 4rem;
+    }
+
+    .blog-post-page .article-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .article h1 {
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-post-page .article-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .blog-post-page .article-author {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post-page .ai-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 0.4rem 0.85rem;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+    }
+
+    .blog-post-page .article p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-post-page .article strong {
+      color: var(--text-primary);
+    }
+
+    .blog-post-page .article h2 {
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .article a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ── TL;DR BOX ── */
+    .blog-post-page .tldr-box {
+      background: rgba(20, 184, 166, 0.06);
+      border: 1px solid rgba(20, 184, 166, 0.2);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .blog-post-page .tldr-box .tldr-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post-page .tldr-box p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* ── DISCLAIMER ── */
+    .blog-post-page .disclaimer-box {
+      background: rgba(217, 119, 6, 0.06);
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post-page .disclaimer-toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    .blog-post-page .disclaimer-icon {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      margin-top: 1px;
+    }
+
+    .blog-post-page .disclaimer-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #d97706;
+      margin-bottom: 0.4rem;
+    }
+
+    .blog-post-page .disclaimer-summary {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .blog-post-page .disclaimer-expand-link {
+      color: #d97706;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .blog-post-page .disclaimer-full {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .blog-post-page .disclaimer-full.open {
+      display: block;
+    }
+
+    .blog-post-page .disclaimer-full p {
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-post-page .disclaimer-full ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .blog-post-page .disclaimer-full li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* ── INDICATOR CARDS ── */
+    .blog-post-page .indicator-card {
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post-page .indicator-card.sub {
+      background: rgba(34, 197, 94, 0.05);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+    }
+
+    .blog-post-page .indicator-card.con {
+      background: rgba(249, 115, 22, 0.05);
+      border: 1px solid rgba(249, 115, 22, 0.2);
+    }
+
+    .blog-post-page .indicator-ref {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post-page .indicator-card.sub .indicator-ref {
+      color: #22c55e;
+    }
+
+    .blog-post-page .indicator-card.con .indicator-ref {
+      color: #f97316;
+    }
+
+    .blog-post-page .indicator-regulatory {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.6rem;
+      line-height: 1.45;
+    }
+
+    .blog-post-page .indicator-plain {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-post-page .indicator-example {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+      padding-left: 0.85rem;
+      line-height: 1.55;
+    }
+
+    .blog-post-page .indicator-card.sub .indicator-example {
+      border-left: 3px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .blog-post-page .indicator-card.con .indicator-example {
+      border-left: 3px solid rgba(249, 115, 22, 0.3);
+    }
+
+    .blog-post-page .indicator-example strong {
+      font-style: normal;
+      color: var(--text-secondary);
+    }
+
+    /* ── DOWNLOAD CTA ── */
+    .blog-post-page .download-cta {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2.25rem;
+      text-align: center;
+      margin: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-post-page .download-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .blog-post-page .download-cta h3 {
+      font-size: 1.35rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post-page .download-cta p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .blog-post-page .download-cta .download-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .blog-post-page .download-cta .download-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .blog-post-page .download-cta .download-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+
+    /* ── REGULATORY SOURCE ── */
+    .blog-post-page .reg-source {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .blog-post-page .indicator-card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Fadi Opgenorth</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html" class="active">Blog</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <div class="blog-post-page">
+    <article class="article">
+
+      <div class="article-meta">February 2026</div>
+
+      <h1>Subrecipient or Contractor? A Practitioner's Guide to the &sect;200.331 Determination</h1>
+
+      <p class="article-subtitle">A practitioner's guide to the &sect;200.331 determination &mdash; with a free downloadable worksheet for your award files.</p>
+
+      <p class="article-author">By Fadi Opgenorth, CPA/MBA</p>
+
+      <div class="ai-badge">Produced with the assistance of Anthropic AI &middot; All content reviewed for accuracy by the author</div>
+
+      <!-- Professional Disclaimer (top) -->
+      <div class="disclaimer-box" id="disclaimer-top">
+        <div class="disclaimer-toggle" onclick="toggleDisclaimer('disclaimer-top')">
+          <span class="disclaimer-icon">&#9888;&#65039;</span>
+          <div style="flex: 1;">
+            <div class="disclaimer-label">Important Professional Disclaimer</div>
+            <p class="disclaimer-summary">
+              This article is provided by Fadi Opgenorth, CPA/MBA, strictly as an <strong>educational and informational resource</strong>. It does not constitute professional advice, create a client-practitioner relationship, or transfer any liability or responsibility.
+              <span class="disclaimer-expand-link" id="disclaimer-top-link"> Read full disclaimer &#8595;</span>
+            </p>
+            <div class="disclaimer-full" id="disclaimer-top-full">
+              <p>Distribution or use of this content does <strong>not</strong> create, establish, or imply:</p>
+              <ul>
+                <li>A client-practitioner, advisory, or professional services relationship of any kind;</li>
+                <li>An engagement for accounting, auditing, consulting, attestation, or tax services;</li>
+                <li>A transfer, assumption, or sharing of liability, fiduciary duty, or legal responsibility;</li>
+                <li>Professional assurance, certification, or opinion on any compliance determination; or</li>
+                <li>A guarantee of accuracy, completeness, or applicability to your specific circumstances.</li>
+              </ul>
+              <p>The content herein reflects the author's interpretation of federal regulations as of the publication date and may not account for subsequent amendments, agency-specific guidance, or your organization's unique facts and circumstances. <strong>All subrecipient and contractor determinations must be made by the responsible pass-through entity</strong> based on the specific terms and substance of each agreement, in consultation with qualified legal counsel and your organization's grants management and compliance personnel.</p>
+              <p>This document is not a substitute for professional advice. The author expressly disclaims all liability arising from or related to reliance on this article, any determination made using the accompanying checklist, or any omission of relevant regulatory requirements. Users assume full responsibility for the application of these materials to their own compliance decisions.</p>
+              <p style="font-style: italic;">Consistent with standards promulgated by the American Institute of Certified Public Accountants (AICPA) and applicable state boards of accountancy, nothing in this article constitutes the practice of public accounting or the rendering of a professional opinion.</p>
+              <p><span class="disclaimer-expand-link" onclick="event.stopPropagation(); toggleDisclaimer('disclaimer-top')">Collapse disclaimer &#8593;</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TL;DR -->
+      <div class="tldr-box">
+        <div class="tldr-label">TL;DR for Busy Grant Managers</div>
+        <p>If an entity is <em>carrying out a portion of your federal program</em>, they're likely a <strong>subrecipient</strong>. If they're <em>selling you goods or services</em> you need to run your program, they're likely a <strong>contractor</strong>. The regulation at <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR031321e29ac5bbd/section-200.331" target="_blank" rel="noopener noreferrer">2 CFR &sect;200.331</a> gives you ten indicators to help make this call &mdash; five for each category. But remember: substance over form, always.</p>
+      </div>
+
+      <h2>Why This Determination Matters</h2>
+
+      <p>If you manage federal awards, getting the subrecipient-vs-contractor classification wrong isn't just an academic exercise &mdash; it has real consequences. Misclassification can trigger single audit findings, create compliance gaps in your subrecipient monitoring, skew your indirect cost calculations, and put your organization at risk during federal reviews. I've seen pass-through entities classify relationships as procurement contracts simply to avoid the administrative burden of subrecipient monitoring, and I've seen auditors flag those decisions years later.</p>
+
+      <p>The good news: <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR031321e29ac5bbd/section-200.331" target="_blank" rel="noopener noreferrer">2 CFR &sect;200.331</a> provides a clear analytical framework. Let's break it down.</p>
+
+      <h2>The Ground Rules from &sect;200.331</h2>
+
+      <p>Before diving into the indicators, the regulation establishes several critical principles that practitioners need to internalize. First, an entity can simultaneously wear multiple hats &mdash; acting as a recipient on one award, a subrecipient on another, and a contractor on a third. Each relationship must be evaluated independently.</p>
+
+      <p>Second, the pass-through entity (that's you, if you're reading this) bears the responsibility for making these determinations on a case-by-case basis. You can't create a blanket policy that says "all universities are subrecipients" or "all consultants are contractors." Every agreement needs its own analysis.</p>
+
+      <p>Third &mdash; and this is the part that trips people up &mdash; <strong>the substance of the relationship is more important than the form of the agreement</strong>. You can call something a "consulting agreement" all day long, but if the entity is carrying out a portion of your federal program with programmatic decision-making authority, you've got a subrecipient on your hands. The label on the document doesn't change the underlying relationship.</p>
+
+      <p>Finally, your federal awarding agency may require additional guidance for making these determinations &mdash; but that guidance cannot conflict with &sect;200.331 itself. And while the federal agency doesn't have a direct legal relationship with your subrecipients or contractors, they <em>are</em> responsible for monitoring your oversight of first-tier subrecipients. That means your determination process needs to be documented and defensible.</p>
+
+      <h2>The Five Subrecipient Indicators</h2>
+
+      <p>Section 200.331(a) establishes that a subaward creates a <em>federal financial assistance relationship</em>. The entity isn't selling you something &mdash; it's partnering with you to deliver on the federal mission. Here are the five characteristics that point toward subrecipient status:</p>
+
+      <!-- Subrecipient Indicator 1 -->
+      <div class="indicator-card sub">
+        <div class="indicator-ref">&sect;200.331(a)(1)</div>
+        <div class="indicator-regulatory">Determines who is eligible to receive what Federal assistance</div>
+        <div class="indicator-plain">The entity decides who qualifies for the program's benefits &mdash; for example, selecting which individuals or communities receive services funded by the grant. This is a core programmatic function, not a vendor activity.</div>
+        <div class="indicator-example"><strong>Example:</strong> A community health center receiving HHS funds decides which patients qualify for free screenings based on federal eligibility criteria.</div>
+      </div>
+
+      <!-- Subrecipient Indicator 2 -->
+      <div class="indicator-card sub">
+        <div class="indicator-ref">&sect;200.331(a)(2)</div>
+        <div class="indicator-regulatory">Has its performance measured in relation to whether the objectives of a Federal program were met</div>
+        <div class="indicator-plain">Success is judged by whether the federal program's goals were achieved &mdash; not just whether goods were delivered on time. If the entity's deliverables are tied to programmatic outcomes (e.g., number of people served, reduction in recidivism), that points to a subrecipient relationship.</div>
+        <div class="indicator-example"><strong>Example:</strong> A nonprofit's performance under the subaward is evaluated based on whether workforce training participants obtained employment &mdash; a federal program objective.</div>
+      </div>
+
+      <!-- Subrecipient Indicator 3 -->
+      <div class="indicator-card sub">
+        <div class="indicator-ref">&sect;200.331(a)(3)</div>
+        <div class="indicator-regulatory">Has responsibility for programmatic decision-making</div>
+        <div class="indicator-plain">The entity exercises independent judgment about how the program is designed and delivered. They aren't just following a purchase order &mdash; they're shaping the work itself.</div>
+        <div class="indicator-example"><strong>Example:</strong> A university sub-awardee designs its own research methodology and makes decisions about participant recruitment under an NIH-funded study.</div>
+      </div>
+
+      <!-- Subrecipient Indicator 4 -->
+      <div class="indicator-card sub">
+        <div class="indicator-ref">&sect;200.331(a)(4)</div>
+        <div class="indicator-regulatory">Is responsible for adherence to applicable Federal program requirements specified in the Federal award</div>
+        <div class="indicator-plain">The entity must comply with the same federal regulations that flow down from the prime award &mdash; things like 2 CFR 200 cost principles, reporting requirements, and program-specific conditions. If you're flowing down federal terms, that's a subrecipient signal.</div>
+        <div class="indicator-example"><strong>Example:</strong> A subrecipient must submit SF-425 financial reports, comply with OMB cost principles, and adhere to the terms of the Notice of Award.</div>
+      </div>
+
+      <!-- Subrecipient Indicator 5 -->
+      <div class="indicator-card sub">
+        <div class="indicator-ref">&sect;200.331(a)(5)</div>
+        <div class="indicator-regulatory">Implements a program for a public purpose specified in authorizing statute, as opposed to providing goods or services for the benefit of the pass-through entity</div>
+        <div class="indicator-plain">This is the big-picture test. The entity is carrying out a piece of the federal mission &mdash; serving the public &mdash; not just selling you something your organization needs to operate. If the work would not exist without the federal award, that's a strong subrecipient indicator.</div>
+        <div class="indicator-example"><strong>Example:</strong> A food bank distributes USDA commodities to low-income families as part of a federal nutrition assistance program &mdash; this is direct program implementation, not a service to the pass-through entity.</div>
+      </div>
+
+      <h2>The Five Contractor Indicators</h2>
+
+      <p>Section 200.331(b) establishes that a contract creates a <em>procurement relationship</em>. The entity is providing goods or services for your organization's own use. Here are the five characteristics that point toward contractor status:</p>
+
+      <!-- Contractor Indicator 1 -->
+      <div class="indicator-card con">
+        <div class="indicator-ref">&sect;200.331(b)(1)</div>
+        <div class="indicator-regulatory">Provides the goods and services within normal business operations</div>
+        <div class="indicator-plain">The entity would be doing this work regardless of whether your federal award existed. It's what they do every day for all their clients. Think: IT support, janitorial services, lab supplies, consulting on a defined deliverable.</div>
+        <div class="indicator-example"><strong>Example:</strong> An accounting firm provides your organization with annual financial statement preparation &mdash; the same service it offers to dozens of other clients.</div>
+      </div>
+
+      <!-- Contractor Indicator 2 -->
+      <div class="indicator-card con">
+        <div class="indicator-ref">&sect;200.331(b)(2)</div>
+        <div class="indicator-regulatory">Provides similar goods or services to many different purchasers</div>
+        <div class="indicator-plain">The entity has a broad customer base and isn't doing something unique for your federal program. This is a commercial relationship, not a programmatic partnership.</div>
+        <div class="indicator-example"><strong>Example:</strong> A laboratory equipment supplier sells centrifuges to hospitals, universities, and private companies &mdash; you're just another customer.</div>
+      </div>
+
+      <!-- Contractor Indicator 3 -->
+      <div class="indicator-card con">
+        <div class="indicator-ref">&sect;200.331(b)(3)</div>
+        <div class="indicator-regulatory">Normally operates in a competitive environment</div>
+        <div class="indicator-plain">You could have selected a different vendor through a competitive procurement process. The entity competes for business in the open market rather than being specifically chosen to carry out a portion of the federal program.</div>
+        <div class="indicator-example"><strong>Example:</strong> You solicited three bids for data analysis software and selected the vendor with the best price/value combination.</div>
+      </div>
+
+      <!-- Contractor Indicator 4 -->
+      <div class="indicator-card con">
+        <div class="indicator-ref">&sect;200.331(b)(4)</div>
+        <div class="indicator-regulatory">Provides goods or services that are ancillary to the implementation of a Federal program</div>
+        <div class="indicator-plain">The goods or services support your program but aren't the program itself. They're enabling infrastructure, not the core mission. If you removed the vendor, you'd still have a program &mdash; you'd just need to find a replacement supplier.</div>
+        <div class="indicator-example"><strong>Example:</strong> A printing company produces educational brochures for your grant-funded outreach program. The brochures support the mission, but the printer isn't implementing the program.</div>
+      </div>
+
+      <!-- Contractor Indicator 5 -->
+      <div class="indicator-card con">
+        <div class="indicator-ref">&sect;200.331(b)(5)</div>
+        <div class="indicator-regulatory">Is not subject to compliance requirements of a Federal program as a result of the agreement. However, similar requirements may apply for other reasons.</div>
+        <div class="indicator-plain">You're not flowing down 2 CFR 200, program-specific terms, or audit requirements to this entity through your agreement. They may have their own compliance obligations from other sources, but not because of your subaward.</div>
+        <div class="indicator-example"><strong>Example:</strong> Your IT managed services provider follows SOC 2 security standards &mdash; but that's because of their own business requirements, not because you flowed down federal award terms.</div>
+      </div>
+
+      <h2>The Gray Zone: When Indicators Conflict</h2>
+
+      <p>Here's the reality the regulation acknowledges explicitly: not all characteristics will be present in every case, and you may see indicators from both columns simultaneously. A university researcher providing specialized analytical services under your NIH award might operate in a competitive environment (contractor indicator) while also making programmatic decisions about methodology (subrecipient indicator).</p>
+
+      <p>In these gray-zone cases, focus on the core question: <strong>Is this entity carrying out a portion of the federal program, or providing goods and services for your benefit?</strong> Document your reasoning thoroughly. The determination memo should walk through each indicator, explain which apply and which don't, and clearly articulate why the weight of the evidence supports your conclusion. If your federal agency has issued additional guidance on these determinations, follow it &mdash; &sect;200.331 explicitly allows agencies to provide supplemental direction, as long as it doesn't conflict with the regulation.</p>
+
+      <h2>Practical Recommendations</h2>
+
+      <p>After fifteen years of navigating these determinations in research finance and federal compliance, here's what I recommend. Make the determination at the proposal stage &mdash; not after the award is made. Involve your grants office, your procurement team, and the PI in the conversation. Walk through each of the ten indicators systematically and document your analysis. Keep the completed determination in your award file as evidence of your compliance process. And when you're genuinely uncertain, err on the side of classifying the relationship as a subaward &mdash; the monitoring requirements are heavier, but the compliance risk of under-classifying a subrecipient as a contractor is far greater than the administrative cost of additional oversight.</p>
+
+      <!-- Download CTA -->
+      <div class="download-cta">
+        <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#128203;</div>
+        <h3>Free Downloadable Resource</h3>
+        <p>Get the printable <strong>&sect;200.331 Determination Worksheet</strong> &mdash; a two-page PDF with all ten indicators, fill-in entity information fields, rationale documentation space, and approval signature blocks. Keep it in your award file.</p>
+        <a href="../files/200331-determination-checklist.pdf" target="_blank" class="download-btn">&#8595;&nbsp;&nbsp;Download PDF Checklist</a>
+        <p class="download-note">PDF includes full professional disclaimer &middot; No email required</p>
+      </div>
+
+      <h2>What Goes in Your Award File</h2>
+
+      <p>Your determination documentation should include: identification of the entity and federal award, a narrative description of the goods/services/activities to be performed, a walk-through of each of the ten &sect;200.331 indicators with an assessment of whether each applies, a clear conclusion with rationale, and dated signatures from the preparer, reviewer, and approver. The downloadable worksheet above provides this structure in a print-ready format.</p>
+
+      <!-- Regulatory Source -->
+      <div class="reg-source">
+        <strong style="color: var(--text-secondary);">Regulatory Source:</strong>
+        <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR031321e29ac5bbd/section-200.331" target="_blank" rel="noopener noreferrer">2 CFR &sect;200.331 &mdash; Subrecipient and contractor determinations</a>
+        <br>
+        Full Uniform Guidance:
+        <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200?toc=1" target="_blank" rel="noopener noreferrer">2 CFR Part 200</a>
+      </div>
+
+      <!-- Professional Disclaimer (bottom) -->
+      <div style="margin-top: 2rem;">
+        <div class="disclaimer-box" id="disclaimer-bottom">
+          <div class="disclaimer-toggle" onclick="toggleDisclaimer('disclaimer-bottom')">
+            <span class="disclaimer-icon">&#9888;&#65039;</span>
+            <div style="flex: 1;">
+              <div class="disclaimer-label">Important Professional Disclaimer</div>
+              <p class="disclaimer-summary">
+                This article is provided by Fadi Opgenorth, CPA/MBA, strictly as an <strong>educational and informational resource</strong>. It does not constitute professional advice, create a client-practitioner relationship, or transfer any liability or responsibility.
+                <span class="disclaimer-expand-link" id="disclaimer-bottom-link"> Read full disclaimer &#8595;</span>
+              </p>
+              <div class="disclaimer-full" id="disclaimer-bottom-full">
+                <p>Distribution or use of this content does <strong>not</strong> create, establish, or imply:</p>
+                <ul>
+                  <li>A client-practitioner, advisory, or professional services relationship of any kind;</li>
+                  <li>An engagement for accounting, auditing, consulting, attestation, or tax services;</li>
+                  <li>A transfer, assumption, or sharing of liability, fiduciary duty, or legal responsibility;</li>
+                  <li>Professional assurance, certification, or opinion on any compliance determination; or</li>
+                  <li>A guarantee of accuracy, completeness, or applicability to your specific circumstances.</li>
+                </ul>
+                <p>The content herein reflects the author's interpretation of federal regulations as of the publication date and may not account for subsequent amendments, agency-specific guidance, or your organization's unique facts and circumstances. <strong>All subrecipient and contractor determinations must be made by the responsible pass-through entity</strong> based on the specific terms and substance of each agreement, in consultation with qualified legal counsel and your organization's grants management and compliance personnel.</p>
+                <p>This document is not a substitute for professional advice. The author expressly disclaims all liability arising from or related to reliance on this article, any determination made using the accompanying checklist, or any omission of relevant regulatory requirements. Users assume full responsibility for the application of these materials to their own compliance decisions.</p>
+                <p style="font-style: italic;">Consistent with standards promulgated by the American Institute of Certified Public Accountants (AICPA) and applicable state boards of accountancy, nothing in this article constitutes the practice of public accounting or the rendering of a professional opinion.</p>
+                <p><span class="disclaimer-expand-link" onclick="event.stopPropagation(); toggleDisclaimer('disclaimer-bottom')">Collapse disclaimer &#8593;</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/fadi-opgenorth-cpa-mba/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Fadi-HVAIH" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:fadi@fadiopgenorth.com">fadi@fadiopgenorth.com</a>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../resources.html">Resources</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <form class="form-inline" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
+            <input type="email" name="email" placeholder="AI + finance insights" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Fadi Opgenorth, CPA/MBA
+        <p style="font-size: 0.75rem; max-width: 700px; margin: 0.75rem auto 0; color: var(--text-muted); line-height: 1.5;">Fadi Opgenorth holds CPA License #15395 (Oregon). This website and its operator do not offer, provide, or hold out to provide public accounting, attestation, compilation, audit, tax preparation, or any other services requiring licensure under ORS Chapter 673 and OAR Chapter 801. No CPA-client relationship is created by visiting this site, submitting forms, subscribing to the newsletter, or scheduling calls.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;"><a href="../privacy.html">Privacy Policy</a> | <a href="../terms.html">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function toggleDisclaimer(id) {
+      var full = document.getElementById(id + '-full');
+      var link = document.getElementById(id + '-link');
+      var isOpen = full.classList.contains('open');
+      full.classList.toggle('open');
+      if (isOpen) {
+        link.innerHTML = ' Read full disclaimer &#8595;';
+        link.style.display = '';
+      } else {
+        link.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
