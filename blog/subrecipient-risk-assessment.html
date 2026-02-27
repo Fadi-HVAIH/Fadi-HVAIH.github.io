@@ -446,8 +446,8 @@
       <div class="nav-links">
         <a href="../index.html">Home</a>
         <a href="../about.html">About</a>
-        <a href="../services.html">Services</a>
         <a href="../blog.html" class="active">Blog</a>
+        <a href="../resources.html">Resources</a>
         <a href="../contact.html">Contact</a>
       </div>
       <button class="hamburger" aria-label="Toggle menu">
@@ -458,8 +458,8 @@
   <div class="mobile-nav">
     <a href="../index.html">Home</a>
     <a href="../about.html">About</a>
-    <a href="../services.html">Services</a>
     <a href="../blog.html" class="active">Blog</a>
+    <a href="../resources.html">Resources</a>
     <a href="../contact.html">Contact</a>
   </div>
 
@@ -505,27 +505,7 @@
 
       <p>Before you buy an automation tool for subrecipient monitoring — or hire someone to build one — use this checklist. Half of it tests whether the system covers the regulatory requirements. The other half tests whether the person building it understands why those requirements exist.</p>
 
-      <!-- PDF Lead Magnet -->
-      <div class="lead-magnet">
-        <div class="lead-magnet-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4fd1c5" stroke-width="1.5">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="12" y1="18" x2="12" y2="12"></line>
-            <polyline points="9 15 12 18 15 15"></polyline>
-          </svg>
-        </div>
-        <h3>Download the printable PDF version</h3>
-        <p>Take it to your next vendor meeting or share it with your team. Same 11-point checklist, formatted for print.</p>
-        <form class="lead-form" id="lead-form" method="POST" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" onsubmit="handleLeadSubmit(event)">
-          <input type="email" id="lead-email" name="email" placeholder="you@organization.org" required />
-          <button type="submit">Send Me the PDF</button>
-        </form>
-        <div id="lead-success" style="display: none;">
-          <p class="success-msg">Your PDF is downloading. While you're here — <a href="#checklist-interactive">try the interactive version below.</a></p>
-        </div>
-        <p class="lead-note">No spam. Just this PDF and occasional updates on the tools I'm building.</p>
-      </div>
+      <p style="font-style: italic; color: var(--text-muted);">Printable PDF version coming soon.</p>
 
       <div id="checklist-interactive"></div>
 
@@ -630,16 +610,6 @@
 
       <p>The technology isn't the hard part. Understanding what to automate — and what still requires a human who has actually done this work — is.</p>
 
-      <!-- CTA -->
-      <div class="blog-cta">
-        <h3>I'm building this exact system.</h3>
-        <p>Subrecipient risk scoring, SAM.gov monitoring, and compliance documentation — designed by someone who's performed these assessments by hand. Get early access.</p>
-        <form class="ea-form" action="https://buttondown.com/api/emails/embed-subscribe/opgenorth" method="post" referrerpolicy="unsafe-url">
-          <input type="hidden" name="tag" value="early-access">
-          <input type="email" name="email" placeholder="you@organization.org" required>
-          <button type="submit">Get Early Access</button>
-        </form>
-      </div>
 
     </article>
   </div>
@@ -658,8 +628,8 @@
           <h4>Site</h4>
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
-          <a href="../services.html">Services</a>
           <a href="../blog.html">Blog</a>
+          <a href="../resources.html">Resources</a>
           <a href="../contact.html">Contact</a>
         </div>
         <div class="footer-col footer-newsletter">
@@ -685,29 +655,6 @@
 
   <script src="../js/main.js"></script>
   <script>
-    function handleLeadSubmit(e) {
-      e.preventDefault();
-      var email = document.getElementById('lead-email').value;
-
-      // Open PDF immediately (synchronous) to avoid popup blockers
-      window.open('../files/subrecipient-risk-assessment-checklist.pdf', '_blank');
-
-      // Subscribe in background — fire and forget
-      var form = new FormData();
-      form.append('email', email);
-      form.append('tag', 'checklist-lead-magnet');
-      fetch('https://buttondown.com/api/emails/embed-subscribe/opgenorth', {
-        method: 'POST',
-        body: form
-      }).catch(function() {
-        // Subscription failed silently — user already has the PDF
-      });
-
-      // Update UI
-      document.getElementById('lead-form').style.display = 'none';
-      document.getElementById('lead-success').style.display = 'block';
-    }
-
     var TOTAL = 11;
     var REG_TOTAL = 6;
     var DOM_TOTAL = 5;
