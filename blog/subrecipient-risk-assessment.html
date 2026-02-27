@@ -505,7 +505,24 @@
 
       <p>Before you buy an automation tool for subrecipient monitoring — or hire someone to build one — use this checklist. Half of it tests whether the system covers the regulatory requirements. The other half tests whether the person building it understands why those requirements exist.</p>
 
-      <p style="font-style: italic; color: var(--text-muted);">Printable PDF version coming soon.</p>
+      <div class="lead-magnet" id="lead-magnet">
+        <div class="lead-magnet-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="12" y1="12" x2="12" y2="18"></line>
+            <polyline points="9 15 12 18 15 15"></polyline>
+          </svg>
+        </div>
+        <h3>Download the printable PDF version</h3>
+        <p>Take it to your next vendor meeting or share it with your team. Same 11-point checklist, formatted for print.</p>
+        <form class="lead-form" id="lead-form" onsubmit="handleLeadSubmit(event)">
+          <input type="email" name="email" placeholder="you@organization.org" required>
+          <input type="hidden" name="tag" value="checklist-lead-magnet">
+          <button type="submit">Send Me the PDF</button>
+        </form>
+        <p class="lead-note">By submitting your email, you agree to receive occasional emails about new compliance resources, field guides, and blog posts from Fadi Opgenorth. You can unsubscribe at any time using the link in every email. Your email will never be sold or shared. See our <a href="../privacy.html" style="color: var(--accent);">Privacy Policy</a> for details.</p>
+      </div>
 
       <div id="checklist-interactive"></div>
 
@@ -655,6 +672,34 @@
 
   <script src="../js/main.js"></script>
   <script>
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('lead-form');
+      var email = form.querySelector('input[name="email"]').value;
+
+      // Open PDF in new tab
+      window.open('../files/subrecipient-risk-assessment-checklist.pdf', '_blank');
+
+      // Submit email to Buttondown in background
+      var formData = new FormData();
+      formData.append('email', email);
+      formData.append('tag', 'checklist-lead-magnet');
+      fetch('https://buttondown.com/api/emails/embed-subscribe/opgenorth', {
+        method: 'POST',
+        body: formData
+      }).catch(function() {});
+
+      // Hide form and show success message
+      var container = document.getElementById('lead-magnet');
+      form.style.display = 'none';
+      var note = container.querySelector('.lead-note');
+      if (note) note.style.display = 'none';
+      var msg = document.createElement('p');
+      msg.className = 'success-msg';
+      msg.innerHTML = 'Your PDF is downloading. While you\u2019re here \u2014 try the <a href="#checklist-interactive" style="color: var(--accent); text-decoration: underline;">interactive version below</a>.';
+      container.appendChild(msg);
+    }
+
     var TOTAL = 11;
     var REG_TOTAL = 6;
     var DOM_TOTAL = 5;
