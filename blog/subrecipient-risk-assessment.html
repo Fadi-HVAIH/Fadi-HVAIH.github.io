@@ -431,6 +431,97 @@
 
     .blog-post-page .blog-cta button:hover { opacity: 0.9; }
 
+    /* ── AI BADGE ── */
+    .blog-post-page .ai-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 0.4rem 0.85rem;
+      font-style: italic;
+    }
+
+    /* ── DISCLAIMER ── */
+    .blog-post-page .disclaimer-box {
+      background: rgba(217, 119, 6, 0.06);
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post-page .disclaimer-toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    .blog-post-page .disclaimer-icon {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      margin-top: 1px;
+    }
+
+    .blog-post-page .disclaimer-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #d97706;
+      margin-bottom: 0.4rem;
+    }
+
+    .blog-post-page .disclaimer-summary {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .blog-post-page .disclaimer-expand-link {
+      color: #d97706;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .blog-post-page .disclaimer-full {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .blog-post-page .disclaimer-full.open {
+      display: block;
+    }
+
+    .blog-post-page .disclaimer-full p {
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-post-page .disclaimer-full ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .blog-post-page .disclaimer-full li {
+      margin-bottom: 0.2rem;
+    }
+
     @media (max-width: 768px) {
       .blog-post-page .checklist { padding: 1.5rem; }
       .blog-post-page .blog-cta input[type="email"] { width: 100%; }
@@ -627,6 +718,38 @@
 
       <p>The technology isn't the hard part. Understanding what to automate — and what still requires a human who has actually done this work — is.</p>
 
+      <!-- AI Disclosure -->
+      <div class="ai-badge" style="margin-top: 2.5rem;">Produced with the assistance of Anthropic AI &middot; All content reviewed for accuracy by the author</div>
+
+      <!-- Professional Disclaimer -->
+      <div style="margin-top: 1.5rem;">
+        <div class="disclaimer-box" id="disclaimer-bottom">
+          <div class="disclaimer-toggle" onclick="toggleDisclaimer('disclaimer-bottom')">
+            <span class="disclaimer-icon">&#9888;&#65039;</span>
+            <div style="flex: 1;">
+              <div class="disclaimer-label">Important Professional Disclaimer</div>
+              <p class="disclaimer-summary">
+                This article is provided by Fadi Opgenorth, CPA/MBA, strictly as an <strong>educational and informational resource</strong>. It does not constitute professional advice, create a client-practitioner relationship, or transfer any liability or responsibility.
+                <span class="disclaimer-expand-link" id="disclaimer-bottom-link"> Read full disclaimer &#8595;</span>
+              </p>
+              <div class="disclaimer-full" id="disclaimer-bottom-full">
+                <p>Distribution or use of this content does <strong>not</strong> create, establish, or imply:</p>
+                <ul>
+                  <li>A client-practitioner, advisory, or professional services relationship of any kind;</li>
+                  <li>An engagement for accounting, auditing, consulting, attestation, or tax services;</li>
+                  <li>A transfer, assumption, or sharing of liability, fiduciary duty, or legal responsibility;</li>
+                  <li>Professional assurance, certification, or opinion on any compliance determination; or</li>
+                  <li>A guarantee of accuracy, completeness, or applicability to your specific circumstances.</li>
+                </ul>
+                <p>The content herein reflects the author's interpretation of federal regulations as of the publication date and may not account for subsequent amendments, agency-specific guidance, or your organization's unique facts and circumstances. <strong>All subrecipient and contractor determinations must be made by the responsible pass-through entity</strong> based on the specific terms and substance of each agreement, in consultation with qualified legal counsel and your organization's grants management and compliance personnel.</p>
+                <p>This document is not a substitute for professional advice. The author expressly disclaims all liability arising from or related to reliance on this article, any determination made using the accompanying checklist, or any omission of relevant regulatory requirements. Users assume full responsibility for the application of these materials to their own compliance decisions.</p>
+                <p style="font-style: italic;">Consistent with standards promulgated by the American Institute of Certified Public Accountants (AICPA) and applicable state boards of accountancy, nothing in this article constitutes the practice of public accounting or the rendering of a professional opinion.</p>
+                <p><span class="disclaimer-expand-link" onclick="event.stopPropagation(); toggleDisclaimer('disclaimer-bottom')">Collapse disclaimer &#8593;</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </article>
   </div>
@@ -770,6 +893,19 @@
         verdict.innerHTML = '<p class="verdict-text"><strong>Getting there, but gaps remain in both areas.</strong> ' + (REG_TOTAL - regChecked) + ' regulatory and ' + (DOM_TOTAL - domChecked) + ' domain item' + ((REG_TOTAL - regChecked) + (DOM_TOTAL - domChecked) > 1 ? 's' : '') + ' unchecked. Review the flagged items — each one represents a potential audit finding or a system that produces confident wrong answers.</p>';
       } else {
         verdict.innerHTML = '<p class="verdict-text"><strong>Significant gaps.</strong> Only ' + total + ' of ' + TOTAL + ' items covered. This system or vendor isn\'t ready for regulated subrecipient monitoring. You may be automating a process that produces documented noncompliance faster than you could produce it manually.</p>';
+      }
+    }
+
+    function toggleDisclaimer(id) {
+      var full = document.getElementById(id + '-full');
+      var link = document.getElementById(id + '-link');
+      var isOpen = full.classList.contains('open');
+      full.classList.toggle('open');
+      if (isOpen) {
+        link.innerHTML = ' Read full disclaimer &#8595;';
+        link.style.display = '';
+      } else {
+        link.style.display = 'none';
       }
     }
 
